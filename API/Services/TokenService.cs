@@ -18,7 +18,7 @@ namespace API.Services
 
         {
             _Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Config["TokenKey"]));
-        }
+        } 
 
         public string CreateToken(AppUser user)
         {
