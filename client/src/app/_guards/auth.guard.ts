@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthGuard implements CanActivate {
   constructor(private accountservice: AccountService, private toastr: ToastrService) { }
+  
   canActivate(): Observable<boolean> {
     return this.accountservice.currentUser$.pipe(
       map(user => {
